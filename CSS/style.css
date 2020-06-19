@@ -162,9 +162,6 @@ footer {
 }
 
 /* main */
-.hero {
-  background-image: url();
-}
 
 .hero-title {
   color: var(--secondary-white-color);
@@ -261,8 +258,7 @@ footer {
   color: var(--secondary-text-color);
 }
 
-.filtr-item:hover,
-.filtr-item:focus {
+.portfolio-card:hover .filtr-item {
   color: var(--secondary-white-color);
   background-color: var(--accent-collor);
 }
@@ -357,10 +353,6 @@ btn:focus {
   padding-top: 94px;
 }
 
-.features-item {
-  margin-top: 30px;
-}
-
 .features-text {
   margin-top: 10px;
 }
@@ -429,11 +421,12 @@ btn:focus {
 }
 
 .btn-icon {
-  display: inline-block;
+  display: inline-flex;
   border: 1px solid transparent;
   width: 44px;
   height: 44px;
-  text-align: center;
+  justify-content: center;
+  align-items: center;
   border-radius: 50px;
   color: var(--secondary-white-color);
   background: rgba(255, 255, 255, 0.1);
@@ -445,6 +438,30 @@ btn:focus {
 }
 .btn-icon:active {
   box-shadow: inset 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.icon-instagram {
+  background-image: url(../img/instagram-2.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.icon-twitter {
+  background-image: url(../img/twitter-2.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.icon-facebook {
+  background-image: url(../img/facebook-2.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.icon-linkedin {
+  background-image: url(../img/linkedin-2.svg);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .contacts > .link {
@@ -531,7 +548,7 @@ btn:focus {
 .flex-nav .link {
   display: block;
   padding-top: 32px;
-  padding-bottom: 32x;
+  padding-bottom: 32px;
   border-radius: 2px;
 }
 
@@ -639,3 +656,62 @@ btn:focus {
 }
 
 /* Оформление иконок и фона */
+
+.hero {
+  height: 600px;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+
+  background-color: rgba(47, 48, 58, 0.8);
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.8),
+      rgba(47, 48, 58, 0.8)
+    ),
+    url(../img/hero-img.jpg);
+  background-repeat: no-repeat;
+}
+
+.form-conteiner .btn::after {
+  display: inline-block;
+  content: '';
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+  background-image: url(../img/icon-send.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.form-conteiner .btn {
+  display: flex;
+  align-items: center;
+}
+
+.features-item::before {
+  display: block;
+  content: '';
+  width: 270px;
+  height: 120px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+  border-radius: 4px;
+  background-color: #f5f4fa;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.icon-feature-1::before {
+  background-image: url(../img/feature-1.svg);
+}
+.icon-feature-2::before {
+  background-image: url(../img/feature-2.svg);
+}
+.icon-feature-3::before {
+  background-image: url(../img/feature-3.svg);
+}
+.icon-feature-4::before {
+  background-image: url(../img/feature-4.svg);
+}
