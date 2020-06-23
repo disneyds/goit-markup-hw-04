@@ -18,6 +18,7 @@
   --main-text-color: #757575;
   --secondary-text-color: #212121;
   --secondary-white-color: #ffffff;
+  --icon-color: #afb1b8;
 }
 /* Обнуление */
 
@@ -57,6 +58,7 @@ body {
 .no-padding {
   padding: 0;
 }
+
 .no-margin {
   margin: 0;
 }
@@ -221,10 +223,24 @@ footer {
     0px 1px 1px rgba(0, 0, 0, 0.12);
 }
 
+.human-contacts .link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--icon-color);
+  width: 44px;
+  height: 44px;
+  border: 1px solid transparent;
+  border-radius: 50px;
+  background-color: var(--secondary-white-color);
+}
+
 .human-contacts .link:hover,
 .human-contacts .link:focus {
-  color: var(--accent-collor);
+  color: var(--secondary-white-color);
+  background-color: var(--accent-collor);
 }
+
 .team-name {
   color: var(--secondary-text-color);
   font-weight: 500;
@@ -244,6 +260,7 @@ footer {
 
 .company-item:hover,
 .company-item:focus {
+  border-color: var(--accent-collor);
   color: var(--accent-collor);
 }
 
@@ -272,6 +289,7 @@ footer {
 }
 
 .human {
+  background-color: var(--main-backgrond);
   box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
     0px 1px 1px rgba(0, 0, 0, 0.12);
 }
@@ -415,10 +433,6 @@ btn:focus {
 }
 
 /* footer */
-
-.footer {
-  /* padding-top: 48px; */
-}
 
 .btn-icon {
   display: inline-flex;
@@ -587,6 +601,8 @@ btn:focus {
 
 .human-contacts {
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .human-contacts .item + .item {
@@ -598,7 +614,14 @@ btn:focus {
 }
 
 .company-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90px;
   width: 170px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  color: var(--icon-color);
 }
 
 .company-list .company-item + .company-item {
@@ -714,4 +737,66 @@ btn:focus {
 }
 .icon-feature-4::before {
   background-image: url(../img/feature-4.svg);
+}
+
+.human-contacts .icon {
+  width: 20px;
+  height: 20px;
+}
+
+.logo-1 {
+  width: 45px;
+  height: 50px;
+}
+
+.logo-2 {
+  width: 40px;
+  height: 52px;
+}
+
+.logo-3 {
+  width: 41px;
+  height: 43px;
+}
+
+.logo-4 {
+  width: 80px;
+  height: 42px;
+}
+
+.logo-5 {
+  width: 59px;
+  height: 47px;
+}
+
+.logo-6 {
+  width: 89px;
+  height: 45px;
+}
+
+.footer-logo,
+.header-logo {
+  width: 153px;
+  height: 31px;
+}
+.mail,
+.phone {
+  display: flex;
+  align-items: center;
+}
+.icon-mail {
+  width: 16px;
+  height: 11px;
+}
+.icon-phone {
+  width: 10px;
+  height: 15px;
+}
+
+.address-text {
+  margin-left: 10px;
+}
+
+.icon {
+  fill: currentColor;
 }
